@@ -1,0 +1,338 @@
+#:kivy 1.0.9
+
+<MyLayout>
+    subcostal: "On"
+    substernal: "On"
+    intercostal: "On"
+    clavicular: "On"
+    suprasternal: "On"
+
+    subcostal_btn: subcostal_btn
+    substernal_btn: substernal_btn
+    intercostal_btn: intercostal_btn
+    clavicular_btn: clavicular_btn
+    suprasternal_btn: suprasternal_btn
+
+    subcostal_label: subcostal_label
+    substernal_label: substernal_label
+    intercostal_label: intercostal_label
+    clavicular_label: clavicular_label
+    suprasternal_label: suprasternal_label
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        background_color: (1, 1, 1, 1)
+
+        ## Title
+        BoxLayout:
+            orientation: "vertical"
+            size: root.width, root.height
+            Label:
+                text: "ACTIVATE RETRACTIONS"
+                bold: True
+                font_size: 45
+                color: (0, 0, 0, 1)
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                text: "BY CLICKING ON THE BUTTONS BELOW"
+                bold: True
+                font_size: 15
+                color: (0, 0, 0, 1)
+                halign: 'center'
+                valign: 'top'
+                text_size: self.size
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        ## Buttons
+        BoxLayout:
+            orientation: "horizontal"
+            background_color: (1, 1, 1, 1)
+            Label:
+                size_hint_x: 1/6
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                id: subcostal_btn
+                text: "Subcostal"
+                bold: True
+                color: (1, 1, 1, 1)
+                background_color: (0.18, 0.498, 0.631, 1)
+                background_normal: ""
+                on_press: root.subcostal_routine()
+                canvas.after:
+                    Color:
+                        rgba: (0.18, 0.498, 0.631, 1)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                id: substernal_btn
+                text: "Substernal"
+                bold: True
+                color: (1, 1, 1, 1)
+                background_color: (0.18, 0.498, 0.631, 1)
+                background_normal: ""
+                on_press: root.substernal_routine()
+                canvas.after:
+                    Color:
+                        rgba: (0.18, 0.498, 0.631, 1)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                id: intercostal_btn
+                text: "Intercostal"
+                bold: True
+                color: (1, 1, 1, 1)
+                background_color: (0.18, 0.498, 0.631, 1)
+                background_normal: ""
+                on_press: root.intercostal_routine()
+                canvas.after:
+                    Color:
+                        rgba: (0.18, 0.498, 0.631, 1)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                id: clavicular_btn
+                text: "Clavicular"
+                bold: True
+                color: (1, 1, 1, 1)
+                background_color: (0.18, 0.498, 0.631, 1)
+                background_normal: ""
+                on_press: root.clavicular_routine()
+                canvas.after:
+                    Color:
+                        rgba: (0.18, 0.498, 0.631, 1)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Button:
+                id: suprasternal_btn
+                text: "Suprasternal"
+                bold: True
+                color: (1, 1, 1, 1)
+                background_color: (0.18, 0.498, 0.631, 1)
+                background_normal: ""
+                on_press: root.suprasternal_routine()
+                canvas.after:
+                    Color:
+                        rgba: (0.18, 0.498, 0.631, 1)
+                    Line:
+                        width: 2
+                        rectangle: self.x, self.y, self.width, self.height
+            Label:
+                size_hint_x: 1/6
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+        ## Buttons
+        BoxLayout:
+            orientation: "horizontal"
+            background_color: (1, 1, 1, 1)
+            Label:
+                size_hint_x: 1/6
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                id: subcostal_label
+                picture_source: 'retractions_pictures\GrayOff.png'
+                canvas.after:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        source: self.picture_source
+                canvas.before:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                id: substernal_label
+                picture_source: 'retractions_pictures\GrayOff.png'
+                canvas.after:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        source: self.picture_source
+                canvas.before:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                id: intercostal_label
+                picture_source: 'retractions_pictures\GrayOff.png'
+                canvas.after:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        source: self.picture_source
+                canvas.before:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                id: clavicular_label
+                picture_source: 'retractions_pictures\GrayOff.png'
+                canvas.after:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        source: self.picture_source
+                canvas.before:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                size_hint_x: 1/12
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                id: suprasternal_label
+                picture_source: 'retractions_pictures\GrayOff.png'
+                canvas.after:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                        source: self.picture_source
+                canvas.before:
+                    Color:
+                        rgba: (1, 1, 1, 1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                size_hint_x: 1/6
+                background_color: (1, 1, 1, 1)
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        
+        ## Padding below
+        Label:
+            size_hint_y: 1/4
+            background_color: (1, 1, 1, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
