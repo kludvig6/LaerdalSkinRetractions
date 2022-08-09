@@ -24,5 +24,3 @@ In kivy, .kv-files are used as a formatting file, similar to XAML-files in .NET-
 
 ### Note on threading
 Threading is used extensively to synchronize breathing, retractions and breathing sounds, as well as running hardware and app concurrently. Though the different threads use shared resources, a lock has not been implemented. This is because multiple threads will not overwrite the shared resources simultaneously. Though reading and writing of the resource might happen simultaneously, this was not seen as a critical problem since it will not cause the system to fail.
-
-
